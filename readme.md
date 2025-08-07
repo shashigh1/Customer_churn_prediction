@@ -1,48 +1,53 @@
-🧠 Customer Churn Prediction
-A Deep learning-powered web application that predicts whether a customer is likely to churn based on key banking and demographic features. Built with Streamlit for real-time user interaction and backed by a deep learning model developed in TensorFlow.
+# 🧠 Customer Churn Prediction
 
-📌 Project Overview
-This application enables businesses to proactively identify customers who are likely to leave, using historical data and advanced predictive analytics. The tool is simple to use, requiring only a few customer inputs to generate a prediction.
+A deep learning-powered web application that predicts whether a customer is likely to churn based on key banking and demographic features. Built with **Streamlit** for real-time user interaction and backed by a neural network model developed in **TensorFlow**.
 
-🎯 Key Features
-✅ User-friendly web interface powered by Streamlit
+🌐 **Live App**: [Launch the Web App](https://customer-churn-prediction-skk.streamlit.app/)
 
-✅ Real-time prediction using a trained neural network (ANN)
+---
 
-✅ Preprocessing includes scaling, label encoding, and one-hot encoding
+## 📌 Project Overview
 
-✅ Model trained and optimized in Google Colab with early stopping and validation
+This application enables businesses to proactively identify customers who are at risk of leaving, using historical data and advanced predictive analytics. The tool is easy to use, requiring only a few customer inputs to generate a prediction with confidence scores.
 
+---
 
-🧠 Model Summary
-Trained on structured customer data using an Artificial Neural Network (ANN)
+## 🎯 Key Features
 
-Optimized using the Adam optimizer and binary cross-entropy loss
+✅ User-friendly web interface powered by Streamlit  
+✅ Real-time prediction using a trained Artificial Neural Network (ANN)  
+✅ Preprocessing includes feature scaling, label encoding, and one-hot encoding  
+✅ Model trained and optimized in Google Colab using early stopping and validation   
+✅ Outputs both churn prediction and probability score  
 
-Includes early stopping for efficient training and overfitting prevention
+---
 
-Achieves high accuracy on validation data
+## 🧠 Model Summary
 
-🏗️ Architecture
-Frontend: Streamlit form-based interface for data input and result visualization
+- Trained on structured customer data using an **Artificial Neural Network (ANN)**
+- Optimized with the **Adam** optimizer and **binary cross-entropy** loss
+- Includes **early stopping** for efficient training and to prevent overfitting
+- Achieves high accuracy on the validation set
 
-Backend:
+---
 
-TensorFlow model (model.keras) for prediction
+## 🏗️ Architecture
 
-StandardScaler (ss.pkl) for feature scaling
+**Frontend**:  
+- Streamlit form-based interface for customer data input and prediction display
 
-LabelEncoder (label_encoder.pkl) for categorical gender data
+**Backend**:  
+- `model.keras` – Trained TensorFlow model  
+- `ss.pkl` – Scikit-learn StandardScaler for numerical features  
+- `label_encoder.pkl` – LabelEncoder for gender  
+- `ohe_geo.pkl` – OneHotEncoder for geography  
 
-OneHotEncoder (ohe_geo.pkl) for geography data
+---
 
+## ✅ Prediction Output
 
-✅ Prediction Output
-Churn Probability: Value between 0 and 1
+- **Churn Probability**: A float value between 0 and 1 (e.g., `0.84`)
+- **Prediction Decision**:
+  - ⚠️ **Customer is likely to churn**
+  - ✅ **Customer is not likely to churn**
 
-Decision:
-  ⚠️ Customer is likely to chur
-  ✅ Customer is not likely to churn
-⚠️ Customer is likely to churn
-
-✅ Customer is not likely to churn
